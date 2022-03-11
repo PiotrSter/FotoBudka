@@ -6,11 +6,15 @@ public class ModelMovement : MonoBehaviour
 {
     Vector3 mPrevPos, mPosDelta;
     public Transform modelTransform;
+    public Rigidbody rb;
 
     void Awake()
     {
         mPrevPos = Vector3.zero;
         mPosDelta = Vector3.zero;
+        modelTransform = this.transform;
+        rb = this.gameObject.AddComponent<Rigidbody>();
+        rb.isKinematic = true;
     }
 
     void Update()
@@ -27,5 +31,8 @@ public class ModelMovement : MonoBehaviour
         }
 
         mPrevPos = Input.mousePosition;
+
+        if (Input.GetKeyDown(KeyCode.W))
+            rb.velocity = new Vector3(1f, 0, 0);
     }
 }
