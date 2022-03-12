@@ -20,7 +20,7 @@ public class CameraBehavior : MonoBehaviour
 
     Vector3 ZoomMinus(Transform transform)
     {
-        if (transform.position.z >= -3f)
+        if (transform.position.z >= -4f)
             return transform.position = new Vector3(transform.position.x + 0.1f, transform.position.y + 0.1f, transform.position.z - 0.1f);
         else
             return transform.position;

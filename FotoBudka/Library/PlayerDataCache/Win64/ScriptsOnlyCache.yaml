@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CameraBehavior
     - LoadModel
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -53,15 +54,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2000}
     - Class: 114
-      Script: {instanceID: 2286}
+      Script: {instanceID: 2096}
     - Class: 114
-      Script: {instanceID: 2398}
+      Script: {instanceID: 2288}
     - Class: 114
-      Script: {instanceID: 2564}
+      Script: {instanceID: 2400}
     - Class: 114
-      Script: {instanceID: 2746}
+      Script: {instanceID: 2566}
     - Class: 114
-      Script: {instanceID: 2832}
+      Script: {instanceID: 2748}
+    - Class: 114
+      Script: {instanceID: 2834}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -87,7 +90,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: cda90c7160c52a1bd05ecf5962bd639f
+      Hash: 363fce7fbe45843e32752277d8a7e2f9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LoadModel
@@ -175,6 +178,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: a8312d9b110213995e99e6c4e99ff493
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraBehavior
   - hash:
       serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
@@ -469,6 +478,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: b06882dff21cdbeb26fccd7a4f0ad081
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ModelMovement
   - hash:
       serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270

@@ -4,22 +4,42 @@ using UnityEngine;
 
 public class ModelMovement : MonoBehaviour
 {
-    Vector3 mPrevPos, mPosDelta;
+    Vector3 mPrevPos, mPosDelta, mOffset;
+    float mZCoord;
     public Transform modelTransform;
-    public Rigidbody rb;
 
     void Awake()
     {
         mPrevPos = Vector3.zero;
         mPosDelta = Vector3.zero;
         modelTransform = this.transform;
-        rb = this.gameObject.AddComponent<Rigidbody>();
-        rb.isKinematic = true;
+        BoxCollider boxCollider = this.gameObject.AddComponent<BoxCollider>();
+    }
+
+    void OnMouseDown()
+    {
+        mZCoord = Camera.main.WorldToScreenPoint(modelTransform.position).z;
+
+        mOffset = modelTransform.position - GetMouseWorldPos();
+    }
+
+    Vector3 GetMouseWorldPos()
+    {
+        Vector3 mousePoint = Input.mousePosition;
+
+        mousePoint.z = mZCoord;
+
+        return Camera.main.ScreenToWorldPoint(mousePoint);
+    }
+
+    void OnMouseDrag()
+    {
+        modelTransform.position = GetMouseWorldPos() + mOffset;
     }
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             mPosDelta = Input.mousePosition - mPrevPos;
             if (Vector3.Dot(modelTransform.up, Vector3.up) >= 0)
@@ -32,7 +52,10 @@ public class ModelMovement : MonoBehaviour
 
         mPrevPos = Input.mousePosition;
 
-        if (Input.GetKeyDown(KeyCode.W))
-            rb.velocity = new Vector3(1f, 0, 0);
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            modelTransform.position = new Vector3(0, 0, 0);
+            modelTransform.rotation = new Quaternion(0, 0, 0, 0);
+        }
     }
 }
