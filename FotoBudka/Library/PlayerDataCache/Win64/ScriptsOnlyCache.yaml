@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraBehavior
     - LoadModel
+    - TakeScreenshot
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -52,19 +53,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1486}
     - Class: 114
-      Script: {instanceID: 2000}
+      Script: {instanceID: 1750}
     - Class: 114
-      Script: {instanceID: 2096}
+      Script: {instanceID: 2002}
     - Class: 114
-      Script: {instanceID: 2288}
+      Script: {instanceID: 2098}
     - Class: 114
-      Script: {instanceID: 2400}
+      Script: {instanceID: 2290}
     - Class: 114
-      Script: {instanceID: 2566}
+      Script: {instanceID: 2402}
     - Class: 114
-      Script: {instanceID: 2748}
+      Script: {instanceID: 2568}
     - Class: 114
-      Script: {instanceID: 2834}
+      Script: {instanceID: 2750}
+    - Class: 114
+      Script: {instanceID: 2836}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -154,6 +157,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TakeScreenshot
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -523,4 +532,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/piotr/Desktop/Test/FotoBudka.exe
+  playerPath: C:/Users/piotr/Desktop/ZadanieTestowe/FotoBudka.exe

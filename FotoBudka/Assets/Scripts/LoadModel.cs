@@ -62,4 +62,9 @@ public class LoadModel : MonoBehaviour
         model = (GameObject)Instantiate(ForwardModel(models), new Vector3(0, 0, 0), Quaternion.identity, this.gameObject.transform);
         model.AddComponent<ModelMovement>();
     }
+
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
 }
