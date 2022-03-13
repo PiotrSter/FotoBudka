@@ -24,7 +24,6 @@ public class TakeScreenshot : MonoBehaviour
         string path = $"{Application.persistentDataPath}/Output";
         DirectoryInfo directoryInfo;
         string fileName = dateTime.ToString("yyyy/MM/dd H-mm-ss");
-        //canvas.enabled = false;
         if (!Directory.Exists(path))
             directoryInfo = Directory.CreateDirectory(path);
         if (!File.Exists($"{fileName}.png"))
